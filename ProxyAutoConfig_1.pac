@@ -43,7 +43,7 @@ function FindProxyForURL(url, host)
 	    return 'DIRECT';
     }
     else {
-		return "SOCKS5 free.mooo.info:9151; SOCKS5 free.mooo.info:9155; PROXY 127.0.0.1:8580; PROXY 127.0.0.1:9457; DIRECT";
+		return "SOCKS5 bypass.kozow.com:9151; SOCKS5 bypass.kozow.com:9155; PROXY 127.0.0.1:9457; PROXY 127.0.0.1:8580; DIRECT";
     }
 
 //	return 'DIRECT';
