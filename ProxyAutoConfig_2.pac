@@ -22,8 +22,9 @@ function FindProxyForURL(url, host)
       || shExpMatch(host,"*gmail*")
       || shExpMatch(host,"*yahoo*")
     ) {
-		return "PROXY 127.0.0.1:9457; SOCKS5 bypass.kozow.com:9155; SOCKS5 bypass.kozow.com:9151; PROXY 127.0.0.1:8580; DIRECT";
+		return "PROXY 127.0.0.1:9457; SOCKS 127.0.0.1:9155; SOCKS bypass.kozow.com:9155; SOCKS bypass.kozow.com:9151; PROXY 127.0.0.1:8580; DIRECT";
     }
-
-    return 'DIRECT';
+    else {
+		return 'DIRECT';
+    }
 }

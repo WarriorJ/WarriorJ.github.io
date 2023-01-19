@@ -8,7 +8,7 @@ function FindProxyForURL(url, host)
       || isInNet(dnsResolve(host), "192.168.0.0", "255.255.0.0")
       || isInNet(dnsResolve(host), "127.0.0.0", "255.255.255.0")
     ) {
-		return "DIRECT";
+	    return "DIRECT";
     }
 
     if (shExpMatch(host,"*zaobao*")
@@ -39,12 +39,17 @@ function FindProxyForURL(url, host)
       || shExpMatch(host,"*alipay*")
       || shExpMatch(host,"*qq*")
       || shExpMatch(host,"*tencent*")
+      || shExpMatch(host,"*microsoft*")
+      || shExpMatch(host,"*localhost*")
+      || shExpMatch(host,"*yandex*")
+      || shExpMatch(host,"*vfemail*")
+      || shExpMatch(host,"*aol*")
+      || shExpMatch(host,"*21cn*")
+      || shExpMatch(host,"*inbox*")
     ) {
 	    return 'DIRECT';
     }
     else {
-		return "SOCKS5 bypass.kozow.com:9151; SOCKS5 bypass.kozow.com:9155; PROXY 127.0.0.1:9457; PROXY 127.0.0.1:8580; DIRECT";
+	    return "PROXY 127.0.0.1:9457; SOCKS 127.0.0.1:9155; SOCKS free.mx21.tk:9155; SOCKS free.mx21.tk:9151; PROXY 127.0.0.1:8580; DIRECT";
     }
-
-//	return 'DIRECT';
 }
